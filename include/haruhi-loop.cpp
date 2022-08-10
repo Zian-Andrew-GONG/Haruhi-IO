@@ -1,19 +1,20 @@
 #include "haruhi-loop.h"
 // #include "haruhi-utils.h"
-
+// #include <iostream>
+#include <chrono>
 using namespace Haruhi;
 
 void Loop::loop_start() {
   while(1) {
     /* 矫正时间 */
-    // this->current_time = getCurrentTime();
-    
+    this->current_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+    if(this->timer_que.empty() && this->signal_que.empty() 
+        && this->demux_que.empty()) break;
     /* 处理 timer */
-    // auto timer_node = this->timer_que.top();
     auto& timer_heap = this->timer_que;
     make_heap(timer_heap.begin(), timer_heap.end(), Compare());
-    auto& timer_node = timer_heap[0];
-    if(timer_node->get_timeout() >= this->current_time) {
+    auto timer_node = timer_heap[0];
+    if(timer_node->get_timeout() < this->current_time) {
       auto once = timer_node->callback();
       pop_heap(timer_heap.begin(), timer_heap.end(), Compare());
       timer_heap.pop_back();

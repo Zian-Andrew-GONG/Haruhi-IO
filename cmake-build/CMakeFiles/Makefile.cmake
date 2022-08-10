@@ -51,7 +51,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "include/CMakeFiles/haruhi-loop.dir/DependInfo.cmake"
-  "include/CMakeFiles/haruhi-timer.dir/DependInfo.cmake"
+  "include/CMakeFiles/haruhi.dir/DependInfo.cmake"
   "examples/CMakeFiles/timer.dir/DependInfo.cmake"
   )

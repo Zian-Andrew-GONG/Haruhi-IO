@@ -6,4 +6,4 @@ include_directories(../include)
 # add_subdirectory(../include)
 
 add_executable(timer timer.cpp)
-target_link_libraries(timer haruhi-loop haruhi-timer)
+target_link_libraries(timer haruhi)

@@ -92,8 +92,7 @@ timer_EXTERNAL_OBJECTS =
 
 bin/timer: examples/CMakeFiles/timer.dir/timer.cpp.o
 bin/timer: examples/CMakeFiles/timer.dir/build.make
-bin/timer: include/libharuhi-loop.a
-bin/timer: include/libharuhi-timer.a
+bin/timer: include/libharuhi.a
 bin/timer: examples/CMakeFiles/timer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/timer"
 	cd /Users/gongzian/src/Haruhi-IO/cmake-build/examples && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/timer.dir/link.txt --verbose=$(VERBOSE)

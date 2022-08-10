@@ -3,11 +3,11 @@
 #include <memory>
 using namespace Haruhi;
 
-void Timer::init(std::shared_ptr<TimerOps> ops) {
-  this->m_interval = ops->interval;
-  this->m_timeout = ops->interval + getCurrentTime();
-  this->once = ops->once;
-  this->m_timer_cb = ops->cb;
+void Timer::init(TimerOps ops) {
+  this->m_interval = ops.interval;
+  this->m_timeout = ops.interval + getCurrentTime();
+  this->once = ops.once;
+  this->m_timer_cb = ops.cb;
 }
 
 bool Timer::callback() {

@@ -28,7 +28,7 @@ struct TimerOps: public EventOps
 
 class Timer: public Event {
   public:
-    void init(std::shared_ptr<TimerOps> ops);
+    void init(TimerOps ops);
     virtual bool callback() override;
     virtual std::string type() const override { 
       return "Timer"; }

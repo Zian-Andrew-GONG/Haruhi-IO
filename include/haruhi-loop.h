@@ -45,13 +45,13 @@ class Loop {
     class Compare {
       public:
         bool operator() (const std::shared_ptr<Timer>& a, const std::shared_ptr<Timer>& b) {
-          if(a->get_timeout() < b->get_timeout()) return true;
+          if(a->get_timeout() > b->get_timeout()) return true;
           return false;
         }
     };
     std::vector<std::shared_ptr<Timer>> timer_que;
-    std::queue<std::shared_ptr<Event>> Signal_que;
-    std::queue<std::shared_ptr<Event>> Demux_que;
+    std::queue<std::shared_ptr<Event>> signal_que;
+    std::queue<std::shared_ptr<Event>> demux_que;
     int64_t current_time;
 };
 
