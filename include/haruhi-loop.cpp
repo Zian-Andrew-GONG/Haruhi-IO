@@ -2,6 +2,7 @@
 // #include "haruhi-utils.h"
 // #include <iostream>
 #include <chrono>
+
 using namespace Haruhi;
 
 void Loop::loop_start() {
@@ -24,7 +25,8 @@ void Loop::loop_start() {
         push_heap(timer_heap.begin(), timer_heap.end(), Compare());
       }
     }
-    /* epoll 阻塞 timewait 时间 */
+    auto timewait = timer_heap[0]->get_timeout() - this->current_time;
+    // /* epoll 阻塞 timewait 时间 */
 
   }
 }
