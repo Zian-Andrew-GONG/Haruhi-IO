@@ -6,6 +6,7 @@ set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/cmake-build/bin)
 
 project(Haruhi VERSION 1.0)
 
-add_subdirectory(include)
-# include_directories(src)
+include_directories(src)
+
+add_subdirectory(src)
 add_subdirectory(examples)

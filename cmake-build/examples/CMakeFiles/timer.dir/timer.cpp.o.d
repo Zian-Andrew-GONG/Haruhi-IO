@@ -1,8 +1,8 @@
 examples/CMakeFiles/timer.dir/timer.cpp.o: \
   /Users/gongzian/src/Haruhi-IO/examples/timer.cpp \
-  /Users/gongzian/src/Haruhi-IO/examples/../include/Haruhi.h \
-  /Users/gongzian/src/Haruhi-IO/examples/../include/Haruhi-loop.h \
-  /Users/gongzian/src/Haruhi-IO/examples/../include/Haruhi-event.h \
+  /Users/gongzian/src/Haruhi-IO/examples/../src/include/Haruhi.h \
+  /Users/gongzian/src/Haruhi-IO/examples/../src/include/Haruhi-loop.h \
+  /Users/gongzian/src/Haruhi-IO/examples/../src/include/Haruhi-event.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config_site \
@@ -362,7 +362,7 @@ examples/CMakeFiles/timer.dir/timer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctrans_t.h \
-  /Users/gongzian/src/Haruhi-IO/examples/../include/Haruhi-timer.h \
+  /Users/gongzian/src/Haruhi-IO/examples/../src/include/Haruhi-timer.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/queue \

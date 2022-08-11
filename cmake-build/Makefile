@@ -126,7 +126,7 @@ Haruhi: cmake_check_build_system
 
 # fast build rule for target.
 Haruhi/fast:
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/build
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/build
 .PHONY : Haruhi/fast
 
 #=============================================================================

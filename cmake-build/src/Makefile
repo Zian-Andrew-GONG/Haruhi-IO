@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles /Users/gongzian/src/Haruhi-IO/cmake-build/include//CMakeFiles/progress.marks
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/all
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles /Users/gongzian/src/Haruhi-IO/cmake-build/src//CMakeFiles/progress.marks
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/clean
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,12 +103,12 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/preinstall
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/preinstall
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-include/CMakeFiles/Haruhi.dir/rule:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/CMakeFiles/Haruhi.dir/rule
-.PHONY : include/CMakeFiles/Haruhi.dir/rule
+src/CMakeFiles/Haruhi.dir/rule:
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Haruhi.dir/rule
+.PHONY : src/CMakeFiles/Haruhi.dir/rule
 
 # Convenience name for target.
-Haruhi: include/CMakeFiles/Haruhi.dir/rule
+Haruhi: src/CMakeFiles/Haruhi.dir/rule
 .PHONY : Haruhi
 
 # fast build rule for target.
 Haruhi/fast:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/build
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/build
 .PHONY : Haruhi/fast
 
 Haruhi-loop.o: Haruhi-loop.cpp.o
@@ -135,7 +135,7 @@ Haruhi-loop.o: Haruhi-loop.cpp.o
 
 # target to build an object file
 Haruhi-loop.cpp.o:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o
 .PHONY : Haruhi-loop.cpp.o
 
 Haruhi-loop.i: Haruhi-loop.cpp.i
@@ -143,7 +143,7 @@ Haruhi-loop.i: Haruhi-loop.cpp.i
 
 # target to preprocess a source file
 Haruhi-loop.cpp.i:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.i
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.i
 .PHONY : Haruhi-loop.cpp.i
 
 Haruhi-loop.s: Haruhi-loop.cpp.s
@@ -151,7 +151,7 @@ Haruhi-loop.s: Haruhi-loop.cpp.s
 
 # target to generate assembly for a file
 Haruhi-loop.cpp.s:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.s
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.s
 .PHONY : Haruhi-loop.cpp.s
 
 Haruhi-timer.o: Haruhi-timer.cpp.o
@@ -159,7 +159,7 @@ Haruhi-timer.o: Haruhi-timer.cpp.o
 
 # target to build an object file
 Haruhi-timer.cpp.o:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o
 .PHONY : Haruhi-timer.cpp.o
 
 Haruhi-timer.i: Haruhi-timer.cpp.i
@@ -167,7 +167,7 @@ Haruhi-timer.i: Haruhi-timer.cpp.i
 
 # target to preprocess a source file
 Haruhi-timer.cpp.i:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.i
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.i
 .PHONY : Haruhi-timer.cpp.i
 
 Haruhi-timer.s: Haruhi-timer.cpp.s
@@ -175,7 +175,7 @@ Haruhi-timer.s: Haruhi-timer.cpp.s
 
 # target to generate assembly for a file
 Haruhi-timer.cpp.s:
-	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.s
+	cd /Users/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.s
 .PHONY : Haruhi-timer.cpp.s
 
 # Help Target

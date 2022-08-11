@@ -1,4 +1,4 @@
-# Install script for directory: /Users/gongzian/src/Haruhi-IO/include
+# Install script for directory: /Users/gongzian/src/Haruhi-IO/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
