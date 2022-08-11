@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/gongzian/src/Haruhi-IO/include/haruhi-loop.cpp" "include/CMakeFiles/haruhi.dir/haruhi-loop.cpp.o" "gcc" "include/CMakeFiles/haruhi.dir/haruhi-loop.cpp.o.d"
-  "/Users/gongzian/src/Haruhi-IO/include/haruhi-timer.cpp" "include/CMakeFiles/haruhi.dir/haruhi-timer.cpp.o" "gcc" "include/CMakeFiles/haruhi.dir/haruhi-timer.cpp.o.d"
+  "/Users/gongzian/src/Haruhi-IO/include/Haruhi-loop.cpp" "include/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o" "gcc" "include/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o.d"
+  "/Users/gongzian/src/Haruhi-IO/include/Haruhi-timer.cpp" "include/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o" "gcc" "include/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o.d"
   )
 
 # Targets to which this target links.

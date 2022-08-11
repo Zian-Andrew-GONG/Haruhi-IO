@@ -1,2 +1,2 @@
-#include "haruhi-loop.h"
-#include "haruhi-timer.h"
+#include "Haruhi-loop.h"
+#include "Haruhi-timer.h"

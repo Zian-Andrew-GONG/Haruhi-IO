@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "libharuhi.a"
+  "libHaruhi.a"
 )

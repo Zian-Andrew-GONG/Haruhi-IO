@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named haruhi
+# Target rules for targets named Haruhi
 
 # Build rule for target.
-haruhi: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 haruhi
-.PHONY : haruhi
+Haruhi: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Haruhi
+.PHONY : Haruhi
 
 # fast build rule for target.
-haruhi/fast:
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/haruhi.dir/build.make include/CMakeFiles/haruhi.dir/build
-.PHONY : haruhi/fast
+Haruhi/fast:
+	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/build
+.PHONY : Haruhi/fast
 
 #=============================================================================
 # Target rules for targets named timer
@@ -150,7 +150,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... haruhi"
+	@echo "... Haruhi"
 	@echo "... timer"
 .PHONY : help
 

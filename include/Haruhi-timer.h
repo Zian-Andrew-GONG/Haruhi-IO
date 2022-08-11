@@ -10,7 +10,7 @@
  * 
  */
 
-#include "haruhi-event.h"
+#include "Haruhi-event.h"
 #include <functional>
 
 #pragma once
@@ -30,8 +30,7 @@ class Timer: public Event {
   public:
     void init(TimerOps ops);
     virtual bool callback() override;
-    virtual std::string type() const override { 
-      return "Timer"; }
+    virtual std::string type() const override;
     int64_t get_timeout() const;
     void cal_timeout();
   private:

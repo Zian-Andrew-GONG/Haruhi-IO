@@ -1,7 +1,7 @@
-include/CMakeFiles/haruhi.dir/haruhi-timer.cpp.o: \
-  /Users/gongzian/src/Haruhi-IO/include/haruhi-timer.cpp \
-  /Users/gongzian/src/Haruhi-IO/include/haruhi-timer.h \
-  /Users/gongzian/src/Haruhi-IO/include/haruhi-event.h \
+include/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o: \
+  /Users/gongzian/src/Haruhi-IO/include/Haruhi-timer.cpp \
+  /Users/gongzian/src/Haruhi-IO/include/Haruhi-timer.h \
+  /Users/gongzian/src/Haruhi-IO/include/Haruhi-event.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config_site \
@@ -361,7 +361,7 @@ include/CMakeFiles/haruhi.dir/haruhi-timer.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctrans_t.h \
-  /Users/gongzian/src/Haruhi-IO/include/haruhi-utils.h \
+  /Users/gongzian/src/Haruhi-IO/include/utils/timer-utils.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/time.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_fd_def.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_timeval64.h \

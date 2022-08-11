@@ -10,8 +10,8 @@
  * 
  */
 
-#include "haruhi-event.h"
-#include "haruhi-timer.h"
+#include "Haruhi-event.h"
+#include "Haruhi-timer.h"
 
 #include <deque>
 #include <queue>
@@ -26,7 +26,7 @@ namespace Haruhi {
 class Loop {
   public:
     void loop_start();
-    // void loop_stop();
+    void loop_stop();
     template <typename T>
     void add_event(const T& event) {
       if(event.type() == "Timer") {
@@ -53,6 +53,7 @@ class Loop {
     std::queue<std::shared_ptr<Event>> signal_que;
     std::queue<std::shared_ptr<Event>> demux_que;
     int64_t current_time;
+    bool stop_flag = false;
 };
 
 }

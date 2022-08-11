@@ -1,8 +1,7 @@
 #include <sys/time.h>
-#include <chrono>
 #pragma once
 
-namespace Haruhi {
+namespace Haruhi::utils::loop {
   
 int64_t getCurrentTime() {
   struct timeval tv;

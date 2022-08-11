@@ -1,3 +1,5 @@
-# aux_source_directory(. DIRINCLUDE)
+set(LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/cmake-build/bin)
 
-add_library(haruhi haruhi-loop.cpp haruhi-timer.cpp)
+include_directories(utils)
+
+add_library(Haruhi Haruhi-loop.cpp Haruhi-timer.cpp)

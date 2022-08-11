@@ -1,20 +1,28 @@
-#include "haruhi-loop.h"
-// #include "haruhi-utils.h"
+#include "Haruhi-loop.h"
+#include "loop-utils.h"
 // #include <iostream>
-#include <chrono>
 
 using namespace Haruhi;
 
 void Loop::loop_start() {
   while(1) {
-    /* 矫正时间 */
-    this->current_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
     if(this->timer_que.empty() && this->signal_que.empty() 
-        && this->demux_que.empty()) break;
-    /* 处理 timer */
+       && this->demux_que.empty()) break;
+    /* stop the loop immediately */
+    if(this->stop_flag) break;
+
+    /* update current time */
+    this->current_time = utils::loop::getCurrentTime();
+    /* get the reference of the timer heap */
     auto& timer_heap = this->timer_que;
+    /* calculate the timewait value */
     make_heap(timer_heap.begin(), timer_heap.end(), Compare());
-    auto timer_node = timer_heap[0];
+    auto timewait = timer_heap[0]->get_timeout() - this->current_time;
+    /* epoll's timeout = timewait */
+    /*  */
+
+    /* process the timer event */
+    std::shared_ptr<Haruhi::Timer> timer_node = timer_heap[0];
     if(timer_node->get_timeout() < this->current_time) {
       auto once = timer_node->callback();
       pop_heap(timer_heap.begin(), timer_heap.end(), Compare());
@@ -25,10 +33,13 @@ void Loop::loop_start() {
         push_heap(timer_heap.begin(), timer_heap.end(), Compare());
       }
     }
-    auto timewait = timer_heap[0]->get_timeout() - this->current_time;
-    // /* epoll 阻塞 timewait 时间 */
+
 
   }
+}
+
+void Loop::loop_stop() {
+  this->stop_flag = true;
 }
 
 // template <typename T>

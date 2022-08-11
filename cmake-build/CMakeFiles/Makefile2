@@ -96,7 +96,7 @@ examples/clean: examples/CMakeFiles/timer.dir/clean
 # Directory level rules for directory include
 
 # Recursive "all" directory target.
-include/all: include/CMakeFiles/haruhi.dir/all
+include/all: include/CMakeFiles/Haruhi.dir/all
 .PHONY : include/all
 
 # Recursive "preinstall" directory target.
@@ -104,40 +104,40 @@ include/preinstall:
 .PHONY : include/preinstall
 
 # Recursive "clean" directory target.
-include/clean: include/CMakeFiles/haruhi.dir/clean
+include/clean: include/CMakeFiles/Haruhi.dir/clean
 .PHONY : include/clean
 
 #=============================================================================
-# Target rules for target include/CMakeFiles/haruhi.dir
+# Target rules for target include/CMakeFiles/Haruhi.dir
 
 # All Build rule for target.
-include/CMakeFiles/haruhi.dir/all:
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/haruhi.dir/build.make include/CMakeFiles/haruhi.dir/depend
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/haruhi.dir/build.make include/CMakeFiles/haruhi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=1,2,3 "Built target haruhi"
-.PHONY : include/CMakeFiles/haruhi.dir/all
+include/CMakeFiles/Haruhi.dir/all:
+	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/depend
+	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=1,2,3 "Built target Haruhi"
+.PHONY : include/CMakeFiles/Haruhi.dir/all
 
 # Build rule for subdir invocation for target.
-include/CMakeFiles/haruhi.dir/rule: cmake_check_build_system
+include/CMakeFiles/Haruhi.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/CMakeFiles/haruhi.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 include/CMakeFiles/Haruhi.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 0
-.PHONY : include/CMakeFiles/haruhi.dir/rule
+.PHONY : include/CMakeFiles/Haruhi.dir/rule
 
 # Convenience name for target.
-haruhi: include/CMakeFiles/haruhi.dir/rule
-.PHONY : haruhi
+Haruhi: include/CMakeFiles/Haruhi.dir/rule
+.PHONY : Haruhi
 
 # clean rule for target.
-include/CMakeFiles/haruhi.dir/clean:
-	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/haruhi.dir/build.make include/CMakeFiles/haruhi.dir/clean
-.PHONY : include/CMakeFiles/haruhi.dir/clean
+include/CMakeFiles/Haruhi.dir/clean:
+	$(MAKE) $(MAKESILENT) -f include/CMakeFiles/Haruhi.dir/build.make include/CMakeFiles/Haruhi.dir/clean
+.PHONY : include/CMakeFiles/Haruhi.dir/clean
 
 #=============================================================================
 # Target rules for target examples/CMakeFiles/timer.dir
 
 # All Build rule for target.
-examples/CMakeFiles/timer.dir/all: include/CMakeFiles/haruhi.dir/all
+examples/CMakeFiles/timer.dir/all: include/CMakeFiles/Haruhi.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/timer.dir/build.make examples/CMakeFiles/timer.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/timer.dir/build.make examples/CMakeFiles/timer.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=4,5 "Built target timer"

@@ -1,2 +1,2 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libharuhi.a "CMakeFiles/haruhi.dir/haruhi-loop.cpp.o" "CMakeFiles/haruhi.dir/haruhi-timer.cpp.o"
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libharuhi.a
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libHaruhi.a "CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o" "CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o"
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libHaruhi.a
