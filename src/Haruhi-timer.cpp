@@ -3,19 +3,19 @@
 #include <memory>
 using namespace Haruhi;
 
-void Timer::init(TimerOps ops) {
-  this->m_interval = ops.interval;
-  this->m_timeout = ops.interval + utils::timer::getCurrentTime();
-  this->once = ops.once;
-  this->m_timer_cb = ops.cb;
+void Timer::init(TimerOpts opts) {
+  this->m_interval = opts.interval;
+  this->m_timeout = opts.interval + utils::timer::getCurrentTime();
+  this->once = opts.once;
+  this->m_timer_cb = opts.cb;
 }
 
 bool Timer::callback() {
   this->m_timer_cb();
-  return once;
+  return this->once;
 }
 
-std::string Timer::type() const { return "Timer"; }
+std::string Timer::type() const { return "TIMER"; }
 
 int64_t Timer::get_timeout() const { return this->m_timeout; }
 

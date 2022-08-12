@@ -18,14 +18,14 @@ namespace Haruhi {
 
 class Loop;
 
-struct EventOps {
+struct EventOpts {
   bool once = false;
 };
 
 class Event {
   public:
     virtual ~Event() = default;
-    // virtual void init(std::shared_ptr<EventOps> ops) = 0;
+    // virtual void init(std::shared_ptr<EventOpts> opts) = 0;
     /* 返回值显示是否重新加入堆或队列 */
     virtual bool callback() = 0;
     virtual std::string type() const = 0;

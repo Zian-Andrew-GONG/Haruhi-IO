@@ -76,6 +76,10 @@
     "stop_token": "cpp",
     "iostream": "cpp",
     "cinttypes": "cpp",
-    "__memory": "cpp"
+    "__memory": "cpp",
+    "fstream": "cpp",
+    "ranges": "cpp",
+    "list": "cpp",
+    "set": "cpp"
   }
 }

@@ -12,12 +12,14 @@
 
 #include "Haruhi-event.h"
 #include "Haruhi-timer.h"
+#include "Haruhi-epoll.h"
 
-#include <deque>
 #include <queue>
+#include <list>
 #include <vector>
 #include <memory>
 #include <functional>
+#include <unordered_map>
 
 #pragma once
 
@@ -27,17 +29,18 @@ class Loop {
   public:
     void loop_start();
     void loop_stop();
-    template <typename T>
+    template <class T>
     void add_event(const T& event) {
-      if(event.type() == "Timer") {
-        auto timer = std::make_shared<Timer>(event);
+      if(event.type() == "TIMER") {
+        auto timer = std::make_shared<T>(event);
         this->timer_que.push_back(timer);
         push_heap(this->timer_que.begin(), this->timer_que.end(), Compare());
-      } else if(event.type() == "Signal") {
-
-      } else if(event.type() == "Demux") {
-      
-      }
+      } else if(event.type() == "SIGNAL") {
+      } /* else if(event.type() == "EPOLL") {
+        auto epoll = std::make_shared<T>(event);
+        this->epoll_que.insert(epoll);
+        epoll_map[event.get_fd()] = epoll;
+      } */
     }
     template <typename T>
     bool remove_event(const T& event);
@@ -50,8 +53,9 @@ class Loop {
         }
     };
     std::vector<std::shared_ptr<Timer>> timer_que;
-    std::queue<std::shared_ptr<Event>> signal_que;
-    std::queue<std::shared_ptr<Event>> demux_que;
+    std::list<std::shared_ptr<Event>> signal_que;
+    std::set<std::shared_ptr<Epoll>> epoll_que;
+    std::unordered_map<int, std::shared_ptr<Epoll>> epoll_map;
     int64_t current_time;
     bool stop_flag = false;
 };

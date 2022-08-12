@@ -1,22 +1,31 @@
-#include "Haruhi-event.h"
-#include <functional>
+#include <sys/epoll.h>
+#include <memory>
+#include <set>
 
 #pragma once
 
 namespace Haruhi {
 
-using epoll_cb = std::function<void()>;
-
-struct EpollOps: public EventOps
-{
-  epoll_cb cb;
-};
-
-class Epoll: public Event {
+/* class EpollFd only operates the kernel event list */
+class EpollWrapper {
   public:
-    
+    static std::shared_ptr<EpollWrapper> getEpollWrapper(int size = 2048) {
+      if(epoll_ptr == nullptr) {
+        epoll_ptr = std::shared_ptr<EpollWrapper>(new EpollWrapper(size));
+      } 
+      return epoll_ptr; 
+    }
+    int epoll_add(int fd, uint32_t events);
+    int epoll_del(int fd, uint32_t events);
+    int epoll_mod(int fd, uint32_t events);
+    struct epoll_event* get_epoll_out_events();
+    int wait(int timeout);
   private:
-
+    EpollWrapper(int size) {
+      m_epoll_fd = epoll_create(size);
+    }
+    static std::shared_ptr<EpollWrapper> epoll_ptr;
+    int m_epoll_fd;
+    struct epoll_event* m_epoll_out_events;
 };
-
 }

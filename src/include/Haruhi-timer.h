@@ -19,7 +19,7 @@ namespace Haruhi {
 
 using timer_cb = std::function<void()>;
 
-struct TimerOps: public EventOps
+struct TimerOpts: public EventOpts
 {
   int64_t interval;
   timer_cb cb;
@@ -28,7 +28,7 @@ struct TimerOps: public EventOps
 
 class Timer: public Event {
   public:
-    void init(TimerOps ops);
+    void init(TimerOpts opts);
     virtual bool callback() override;
     virtual std::string type() const override;
     int64_t get_timeout() const;
