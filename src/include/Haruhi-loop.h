@@ -32,15 +32,15 @@ class Loop {
     template <class T>
     void add_event(const T& event) {
       if(event.type() == "TIMER") {
-        auto timer = std::make_shared<T>(event);
+        auto timer = std::make_shared<Timer>(event);
         this->timer_que.push_back(timer);
         push_heap(this->timer_que.begin(), this->timer_que.end(), Compare());
       } else if(event.type() == "SIGNAL") {
-      } /* else if(event.type() == "EPOLL") {
-        auto epoll = std::make_shared<T>(event);
+      } else if(event.type() == "EPOLL") {
+        auto epoll = std::make_shared<Epoll>(event);
         this->epoll_que.insert(epoll);
         epoll_map[event.get_fd()] = epoll;
-      } */
+      }
     }
     template <typename T>
     bool remove_event(const T& event);
