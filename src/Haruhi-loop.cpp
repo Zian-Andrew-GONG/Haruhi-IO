@@ -1,9 +1,40 @@
 #include "Haruhi-loop.h"
 #include "loop-utils.h"
 #include <set>
-// #include <iostream>
+#include <iostream>
 
 using namespace Haruhi;
+
+void Loop::add_event(const Timer& event) {
+  auto timer = std::make_shared<Timer>(event);
+  this->timer_que.push_back(timer);
+  push_heap(this->timer_que.begin(), this->timer_que.end(), Compare());
+}
+void Loop::add_event(const Epoll& event) {
+  auto epoll = std::make_shared<Epoll>(event);
+  this->epoll_que.insert(epoll);
+  epoll_map[event.get_fd()] = epoll;
+}
+
+bool Loop::remove_event(const Timer& event) {
+  auto& timer_heap = this->timer_que;
+  auto timer = std::make_shared<Timer>(event);
+  for(auto iter = timer_heap.begin(); iter != timer_heap.end(); iter++) {
+    if(*iter == timer) {
+      timer_heap.erase(iter);
+      return true;
+    }
+  }
+  return false;
+}
+
+bool Loop::remove_event(const Epoll& event) {
+  auto& set = this->epoll_que;
+  auto epoll_ev = std::make_shared<Epoll>(event);
+  set.erase(epoll_ev);
+  this->epoll_map.erase(epoll_ev->get_fd());
+  return true;
+}
 
 void Loop::loop_start() {
   while(1) {
@@ -19,9 +50,8 @@ void Loop::loop_start() {
     /* calculate the timewait value */
     make_heap(timer_heap.begin(), timer_heap.end(), Compare());
     auto timewait = timer_heap[0]->get_timeout() - this->current_time;
-
+    if(timewait < 0) timewait = 0;
     /* epoll's timeout = timewait */
-    // EpollWrapper::getEpollWrapper();
     auto epoll_wrapper = EpollWrapper::getEpollWrapper();
     int ret = epoll_wrapper->wait(timewait);
     auto epoll_out_events = epoll_wrapper->get_epoll_out_events();
@@ -50,36 +80,9 @@ void Loop::loop_start() {
       }
     }
 
-
   }
 }
 
 void Loop::loop_stop() {
   this->stop_flag = true;
 }
-
-// template <typename T>
-// void Loop::add_event(const T& event) {
-//   if(event.type() == "TIMER") {
-//     auto& timer = std::make_shared<Timer>(event);
-//     this->timer_que.push_back(timer);
-//     push_heap(this->timer_que.begin(), this->timer_que.end(), Compare());
-//   } else if(event.type() == "SIGNAL") {
-
-//   } else if(event.type() == "Demux") {
-
-//   }
-// }
-
-// template <typename T>
-// bool Loop::remove_event(const T& event) {
-//   if(event.type() == "TIMER") {
-//     auto& timer_heap = this->timer_que;
-//     auto timer = std::make_shared<Timer>(event);
-//     for(auto iter = timer_heap.begin(); iter != timer_heap.end(); iter++) {
-//       if(*iter == timer) {
-//         timer_heap.erase(iter);
-//       }
-//     }
-//   }
-// }
