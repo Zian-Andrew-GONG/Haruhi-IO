@@ -6,6 +6,7 @@ examples/CMakeFiles/timer.dir/timer.cpp.o: ../src/include/Haruhi-event.h
 examples/CMakeFiles/timer.dir/timer.cpp.o: ../src/include/Haruhi-loop.h
 examples/CMakeFiles/timer.dir/timer.cpp.o: ../src/include/Haruhi-timer.h
 examples/CMakeFiles/timer.dir/timer.cpp.o: ../src/include/Haruhi.h
+examples/CMakeFiles/timer.dir/timer.cpp.o: ../src/include/common.h
 examples/CMakeFiles/timer.dir/timer.cpp.o: ../src/include/epoll-wrapper.h
 examples/CMakeFiles/timer.dir/timer.cpp.o: ../examples/timer.cpp
 

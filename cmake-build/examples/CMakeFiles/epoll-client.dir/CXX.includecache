@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gongzian/src/Haruhi-IO/examples/epoll-client.cpp
+iostream
+-
+netinet/in.h
+-
+sys/un.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+

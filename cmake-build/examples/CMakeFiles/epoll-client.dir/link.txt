@@ -1,0 +1,1 @@
+/usr/bin/g++-10     CMakeFiles/epoll-client.dir/epoll-client.cpp.o  -o ../bin/epoll-client 

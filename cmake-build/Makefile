@@ -124,6 +124,32 @@ Haruhi/fast:
 .PHONY : Haruhi/fast
 
 #=============================================================================
+# Target rules for targets named epoll-client
+
+# Build rule for target.
+epoll-client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 epoll-client
+.PHONY : epoll-client
+
+# fast build rule for target.
+epoll-client/fast:
+	$(MAKE) -f examples/CMakeFiles/epoll-client.dir/build.make examples/CMakeFiles/epoll-client.dir/build
+.PHONY : epoll-client/fast
+
+#=============================================================================
+# Target rules for targets named epoll-listen
+
+# Build rule for target.
+epoll-listen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 epoll-listen
+.PHONY : epoll-listen
+
+# fast build rule for target.
+epoll-listen/fast:
+	$(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/build
+.PHONY : epoll-listen/fast
+
+#=============================================================================
 # Target rules for targets named timer
 
 # Build rule for target.
@@ -145,6 +171,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Haruhi"
+	@echo "... epoll-client"
+	@echo "... epoll-listen"
 	@echo "... timer"
 .PHONY : help
 

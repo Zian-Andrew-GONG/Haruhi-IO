@@ -111,6 +111,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+examples/CMakeFiles/epoll-client.dir/rule:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/epoll-client.dir/rule
+.PHONY : examples/CMakeFiles/epoll-client.dir/rule
+
+# Convenience name for target.
+epoll-client: examples/CMakeFiles/epoll-client.dir/rule
+
+.PHONY : epoll-client
+
+# fast build rule for target.
+epoll-client/fast:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-client.dir/build.make examples/CMakeFiles/epoll-client.dir/build
+.PHONY : epoll-client/fast
+
+# Convenience name for target.
+examples/CMakeFiles/epoll-listen.dir/rule:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/epoll-listen.dir/rule
+.PHONY : examples/CMakeFiles/epoll-listen.dir/rule
+
+# Convenience name for target.
+epoll-listen: examples/CMakeFiles/epoll-listen.dir/rule
+
+.PHONY : epoll-listen
+
+# fast build rule for target.
+epoll-listen/fast:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/build
+.PHONY : epoll-listen/fast
+
+# Convenience name for target.
 examples/CMakeFiles/timer.dir/rule:
 	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/timer.dir/rule
 .PHONY : examples/CMakeFiles/timer.dir/rule
@@ -124,6 +154,60 @@ timer: examples/CMakeFiles/timer.dir/rule
 timer/fast:
 	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/timer.dir/build.make examples/CMakeFiles/timer.dir/build
 .PHONY : timer/fast
+
+epoll-client.o: epoll-client.cpp.o
+
+.PHONY : epoll-client.o
+
+# target to build an object file
+epoll-client.cpp.o:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-client.dir/build.make examples/CMakeFiles/epoll-client.dir/epoll-client.cpp.o
+.PHONY : epoll-client.cpp.o
+
+epoll-client.i: epoll-client.cpp.i
+
+.PHONY : epoll-client.i
+
+# target to preprocess a source file
+epoll-client.cpp.i:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-client.dir/build.make examples/CMakeFiles/epoll-client.dir/epoll-client.cpp.i
+.PHONY : epoll-client.cpp.i
+
+epoll-client.s: epoll-client.cpp.s
+
+.PHONY : epoll-client.s
+
+# target to generate assembly for a file
+epoll-client.cpp.s:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-client.dir/build.make examples/CMakeFiles/epoll-client.dir/epoll-client.cpp.s
+.PHONY : epoll-client.cpp.s
+
+epoll-listen-server.o: epoll-listen-server.cpp.o
+
+.PHONY : epoll-listen-server.o
+
+# target to build an object file
+epoll-listen-server.cpp.o:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/epoll-listen-server.cpp.o
+.PHONY : epoll-listen-server.cpp.o
+
+epoll-listen-server.i: epoll-listen-server.cpp.i
+
+.PHONY : epoll-listen-server.i
+
+# target to preprocess a source file
+epoll-listen-server.cpp.i:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/epoll-listen-server.cpp.i
+.PHONY : epoll-listen-server.cpp.i
+
+epoll-listen-server.s: epoll-listen-server.cpp.s
+
+.PHONY : epoll-listen-server.s
+
+# target to generate assembly for a file
+epoll-listen-server.cpp.s:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/epoll-listen-server.cpp.s
+.PHONY : epoll-listen-server.cpp.s
 
 timer.o: timer.cpp.o
 
@@ -158,9 +242,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... epoll-client"
 	@echo "... edit_cache"
+	@echo "... epoll-listen"
 	@echo "... rebuild_cache"
 	@echo "... timer"
+	@echo "... epoll-client.o"
+	@echo "... epoll-client.i"
+	@echo "... epoll-client.s"
+	@echo "... epoll-listen-server.o"
+	@echo "... epoll-listen-server.i"
+	@echo "... epoll-listen-server.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"
