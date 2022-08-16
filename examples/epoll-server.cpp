@@ -48,11 +48,12 @@ int main(int argc, char *argv[])
         clnt_sock = accept(serv_sock, (struct sockaddr *)&clnt_adr, &adr_sz);
         Haruhi::EpollOpts opts_clnt = {
             .fd = clnt_sock,
-            .events = EPOLLOUT | EPOLLONESHOT,
+            .events = EPOLLOUT,
             .cb = [&](){
                 puts("client callback");
                 char str[] = "hello";
                 write(clnt_sock, str, sizeof(str) - 1);
+                close(clnt_sock);
             }
         };
         Haruhi::Epoll epoll_ev_clnt;
