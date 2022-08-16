@@ -1,5 +1,7 @@
 #include "Haruhi-epoll.h"
 
+using namespace Haruhi;
+
 void Epoll::init(EpollOpts opts) {
   this->once = opts.once;
   this->m_cb = opts.cb;
@@ -10,7 +12,9 @@ void Epoll::init(EpollOpts opts) {
 }
 
 bool Epoll::callback() {
-  this->m_cb();
+  if(this->m_cb)
+    this->m_cb();
+  else puts("callback error");
   return once;
 }
 

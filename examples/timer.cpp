@@ -1,8 +1,7 @@
 #include "Haruhi.h"
-#include <iostream>
+#include "common.h"
 
 int main() {
-  std::cout << "start ..." << std::endl;
   Haruhi::Loop loop;
   Haruhi::Timer timer, timer_1, timer_2;
   Haruhi::TimerOpts timer_opts = {

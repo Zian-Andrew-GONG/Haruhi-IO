@@ -1,8 +1,7 @@
 #include "Haruhi-loop.h"
 #include "loop-utils.h"
+#include "common.h"
 #include <set>
-#include <iostream>
-
 using namespace Haruhi;
 
 void Loop::add_event(const Timer& event) {
@@ -12,6 +11,7 @@ void Loop::add_event(const Timer& event) {
 }
 void Loop::add_event(const Epoll& event) {
   auto epoll = std::make_shared<Epoll>(event);
+  if(epoll == nullptr) puts("add_event nullptr");
   this->epoll_que.insert(epoll);
   epoll_map[event.get_fd()] = epoll;
 }
@@ -37,27 +37,33 @@ bool Loop::remove_event(const Epoll& event) {
 }
 
 void Loop::loop_start() {
+  puts("loop started ...");
   while(1) {
     if(this->timer_que.empty() && this->signal_que.empty() 
        && this->epoll_que.empty()) break;
     /* stop the loop immediately */
     if(this->stop_flag) break;
-
     /* update current time */
     this->current_time = utils::loop::getCurrentTime();
     /* get the reference of the timer heap */
     auto& timer_heap = this->timer_que;
     /* calculate the timewait value */
+    long timewait = 0;
     make_heap(timer_heap.begin(), timer_heap.end(), Compare());
-    auto timewait = timer_heap[0]->get_timeout() - this->current_time;
+    if(!timer_heap.empty())
+      timewait = timer_heap[0]->get_timeout() - this->current_time;
     if(timewait < 0) timewait = 0;
     /* epoll's timeout = timewait */
     auto epoll_wrapper = EpollWrapper::getEpollWrapper();
+    // std::cout << "timewait = " << timewait << std::endl;
     int ret = epoll_wrapper->wait(timewait);
+    if(ret < 0) break;
     auto epoll_out_events = epoll_wrapper->get_epoll_out_events();
     for(int i = 0; i < ret; ++i) {
       auto active_fd = epoll_out_events[i].data.fd;
+      // std::cout << "active_fd = " << active_fd << std::endl;
       auto epoll = this->epoll_map[active_fd];
+      if(epoll == nullptr) puts("nullptr");
       bool once = epoll->callback();
       if(once) {
         this->epoll_que.erase(epoll);
@@ -68,6 +74,7 @@ void Loop::loop_start() {
     
 
     /* process the timer event */
+    if(timer_heap.empty()) continue;
     std::shared_ptr<Haruhi::Timer> timer_node = timer_heap[0];
     if(timer_node->get_timeout() < this->current_time) {
       auto once = timer_node->callback();
@@ -81,6 +88,8 @@ void Loop::loop_start() {
     }
 
   }
+  auto epoll_wrapper = EpollWrapper::getEpollWrapper();
+  close(epoll_wrapper->get_ref_epoll_fd());
 }
 
 void Loop::loop_stop() {

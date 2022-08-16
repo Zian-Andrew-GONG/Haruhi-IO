@@ -3,7 +3,7 @@
 #include <memory>
 #include <functional>
 
-using namespace Haruhi;
+namespace Haruhi {
 
 using epoll_cb = std::function<void()>;
 
@@ -29,3 +29,5 @@ class Epoll: public Event {
     uint32_t m_events;
     std::shared_ptr<EpollWrapper> epoll_wrapper;
 };
+
+}
