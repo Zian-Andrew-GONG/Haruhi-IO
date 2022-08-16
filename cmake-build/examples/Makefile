@@ -141,6 +141,21 @@ epoll-server/fast:
 .PHONY : epoll-server/fast
 
 # Convenience name for target.
+examples/CMakeFiles/pipe.dir/rule:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/pipe.dir/rule
+.PHONY : examples/CMakeFiles/pipe.dir/rule
+
+# Convenience name for target.
+pipe: examples/CMakeFiles/pipe.dir/rule
+
+.PHONY : pipe
+
+# fast build rule for target.
+pipe/fast:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/build
+.PHONY : pipe/fast
+
+# Convenience name for target.
 examples/CMakeFiles/timer.dir/rule:
 	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/timer.dir/rule
 .PHONY : examples/CMakeFiles/timer.dir/rule
@@ -209,6 +224,33 @@ epoll-server.cpp.s:
 	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/epoll-server.cpp.s
 .PHONY : epoll-server.cpp.s
 
+pipe.o: pipe.cpp.o
+
+.PHONY : pipe.o
+
+# target to build an object file
+pipe.cpp.o:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/pipe.cpp.o
+.PHONY : pipe.cpp.o
+
+pipe.i: pipe.cpp.i
+
+.PHONY : pipe.i
+
+# target to preprocess a source file
+pipe.cpp.i:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/pipe.cpp.i
+.PHONY : pipe.cpp.i
+
+pipe.s: pipe.cpp.s
+
+.PHONY : pipe.s
+
+# target to generate assembly for a file
+pipe.cpp.s:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/pipe.cpp.s
+.PHONY : pipe.cpp.s
+
 timer.o: timer.cpp.o
 
 .PHONY : timer.o
@@ -245,6 +287,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... epoll-client"
 	@echo "... epoll-server"
+	@echo "... pipe"
 	@echo "... rebuild_cache"
 	@echo "... timer"
 	@echo "... epoll-client.o"
@@ -253,6 +296,9 @@ help:
 	@echo "... epoll-server.o"
 	@echo "... epoll-server.i"
 	@echo "... epoll-server.s"
+	@echo "... pipe.o"
+	@echo "... pipe.i"
+	@echo "... pipe.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"

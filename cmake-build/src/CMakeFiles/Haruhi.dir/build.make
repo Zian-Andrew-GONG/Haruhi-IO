@@ -109,12 +109,26 @@ src/CMakeFiles/Haruhi.dir/Haruhi-epoll.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Haruhi.dir/Haruhi-epoll.cpp.s"
 	cd /home/gongzian/src/Haruhi-IO/cmake-build/src && /usr/bin/g++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gongzian/src/Haruhi-IO/src/Haruhi-epoll.cpp -o CMakeFiles/Haruhi.dir/Haruhi-epoll.cpp.s
 
+src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o: src/CMakeFiles/Haruhi.dir/flags.make
+src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o: ../src/Haruhi-signal.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o"
+	cd /home/gongzian/src/Haruhi-IO/cmake-build/src && /usr/bin/g++-10  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o -c /home/gongzian/src/Haruhi-IO/src/Haruhi-signal.cpp
+
+src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.i"
+	cd /home/gongzian/src/Haruhi-IO/cmake-build/src && /usr/bin/g++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gongzian/src/Haruhi-IO/src/Haruhi-signal.cpp > CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.i
+
+src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.s"
+	cd /home/gongzian/src/Haruhi-IO/cmake-build/src && /usr/bin/g++-10 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gongzian/src/Haruhi-IO/src/Haruhi-signal.cpp -o CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.s
+
 # Object files for target Haruhi
 Haruhi_OBJECTS = \
 "CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o" \
 "CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o" \
 "CMakeFiles/Haruhi.dir/epoll-wrapper.cpp.o" \
-"CMakeFiles/Haruhi.dir/Haruhi-epoll.cpp.o"
+"CMakeFiles/Haruhi.dir/Haruhi-epoll.cpp.o" \
+"CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o"
 
 # External object files for target Haruhi
 Haruhi_EXTERNAL_OBJECTS =
@@ -123,9 +137,10 @@ src/libHaruhi.a: src/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o
 src/libHaruhi.a: src/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o
 src/libHaruhi.a: src/CMakeFiles/Haruhi.dir/epoll-wrapper.cpp.o
 src/libHaruhi.a: src/CMakeFiles/Haruhi.dir/Haruhi-epoll.cpp.o
+src/libHaruhi.a: src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o
 src/libHaruhi.a: src/CMakeFiles/Haruhi.dir/build.make
 src/libHaruhi.a: src/CMakeFiles/Haruhi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libHaruhi.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libHaruhi.a"
 	cd /home/gongzian/src/Haruhi-IO/cmake-build/src && $(CMAKE_COMMAND) -P CMakeFiles/Haruhi.dir/cmake_clean_target.cmake
 	cd /home/gongzian/src/Haruhi-IO/cmake-build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Haruhi.dir/link.txt --verbose=$(VERBOSE)
 

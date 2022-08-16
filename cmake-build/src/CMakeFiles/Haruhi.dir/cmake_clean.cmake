@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Haruhi.dir/Haruhi-epoll.cpp.o"
   "CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o"
+  "CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o"
   "CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o"
   "CMakeFiles/Haruhi.dir/epoll-wrapper.cpp.o"
   "libHaruhi.a"

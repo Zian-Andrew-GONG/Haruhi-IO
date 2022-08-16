@@ -76,6 +76,7 @@ clean: examples/clean
 # Recursive "all" directory target.
 examples/all: examples/CMakeFiles/epoll-client.dir/all
 examples/all: examples/CMakeFiles/epoll-server.dir/all
+examples/all: examples/CMakeFiles/pipe.dir/all
 examples/all: examples/CMakeFiles/timer.dir/all
 
 .PHONY : examples/all
@@ -88,6 +89,7 @@ examples/preinstall:
 # Recursive "clean" directory target.
 examples/clean: examples/CMakeFiles/epoll-client.dir/clean
 examples/clean: examples/CMakeFiles/epoll-server.dir/clean
+examples/clean: examples/CMakeFiles/pipe.dir/clean
 examples/clean: examples/CMakeFiles/timer.dir/clean
 
 .PHONY : examples/clean
@@ -117,12 +119,12 @@ src/clean: src/CMakeFiles/Haruhi.dir/clean
 src/CMakeFiles/Haruhi.dir/all:
 	$(MAKE) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/depend
 	$(MAKE) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=1,2,3,4,5 "Built target Haruhi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target Haruhi"
 .PHONY : src/CMakeFiles/Haruhi.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/Haruhi.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/Haruhi.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 0
 .PHONY : src/CMakeFiles/Haruhi.dir/rule
@@ -144,7 +146,7 @@ src/CMakeFiles/Haruhi.dir/clean:
 examples/CMakeFiles/epoll-client.dir/all:
 	$(MAKE) -f examples/CMakeFiles/epoll-client.dir/build.make examples/CMakeFiles/epoll-client.dir/depend
 	$(MAKE) -f examples/CMakeFiles/epoll-client.dir/build.make examples/CMakeFiles/epoll-client.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=6,7 "Built target epoll-client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=7,8 "Built target epoll-client"
 .PHONY : examples/CMakeFiles/epoll-client.dir/all
 
 # Build rule for subdir invocation for target.
@@ -171,12 +173,12 @@ examples/CMakeFiles/epoll-client.dir/clean:
 examples/CMakeFiles/epoll-server.dir/all: src/CMakeFiles/Haruhi.dir/all
 	$(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/depend
 	$(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=8,9 "Built target epoll-server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=9,10 "Built target epoll-server"
 .PHONY : examples/CMakeFiles/epoll-server.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/epoll-server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/epoll-server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/epoll-server.dir/rule
@@ -192,18 +194,45 @@ examples/CMakeFiles/epoll-server.dir/clean:
 .PHONY : examples/CMakeFiles/epoll-server.dir/clean
 
 #=============================================================================
+# Target rules for target examples/CMakeFiles/pipe.dir
+
+# All Build rule for target.
+examples/CMakeFiles/pipe.dir/all: src/CMakeFiles/Haruhi.dir/all
+	$(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/depend
+	$(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=11,12 "Built target pipe"
+.PHONY : examples/CMakeFiles/pipe.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/pipe.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/pipe.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/pipe.dir/rule
+
+# Convenience name for target.
+pipe: examples/CMakeFiles/pipe.dir/rule
+
+.PHONY : pipe
+
+# clean rule for target.
+examples/CMakeFiles/pipe.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/clean
+.PHONY : examples/CMakeFiles/pipe.dir/clean
+
+#=============================================================================
 # Target rules for target examples/CMakeFiles/timer.dir
 
 # All Build rule for target.
 examples/CMakeFiles/timer.dir/all: src/CMakeFiles/Haruhi.dir/all
 	$(MAKE) -f examples/CMakeFiles/timer.dir/build.make examples/CMakeFiles/timer.dir/depend
 	$(MAKE) -f examples/CMakeFiles/timer.dir/build.make examples/CMakeFiles/timer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=10,11 "Built target timer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=13,14 "Built target timer"
 .PHONY : examples/CMakeFiles/timer.dir/all
 
 # Build rule for subdir invocation for target.
 examples/CMakeFiles/timer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/timer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 0
 .PHONY : examples/CMakeFiles/timer.dir/rule

@@ -11,11 +11,19 @@ src/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o
  ../src/include/Haruhi-epoll.h
  ../src/include/Haruhi-event.h
  ../src/include/Haruhi-loop.h
+ ../src/include/Haruhi-signal.h
  ../src/include/Haruhi-timer.h
  ../src/include/common.h
  ../src/include/epoll-wrapper.h
  ../src/utils/loop-utils.h
  /home/gongzian/src/Haruhi-IO/src/Haruhi-loop.cpp
+src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o
+ ../src/include/Haruhi-epoll.h
+ ../src/include/Haruhi-event.h
+ ../src/include/Haruhi-signal.h
+ ../src/include/common.h
+ ../src/include/epoll-wrapper.h
+ /home/gongzian/src/Haruhi-IO/src/Haruhi-signal.cpp
 src/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o
  ../src/include/Haruhi-event.h
  ../src/include/Haruhi-timer.h

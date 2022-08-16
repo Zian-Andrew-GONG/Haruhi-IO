@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gongzian/src/Haruhi-IO/src/Haruhi-epoll.cpp" "/home/gongzian/src/Haruhi-IO/cmake-build/src/CMakeFiles/Haruhi.dir/Haruhi-epoll.cpp.o"
   "/home/gongzian/src/Haruhi-IO/src/Haruhi-loop.cpp" "/home/gongzian/src/Haruhi-IO/cmake-build/src/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.o"
+  "/home/gongzian/src/Haruhi-IO/src/Haruhi-signal.cpp" "/home/gongzian/src/Haruhi-IO/cmake-build/src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o"
   "/home/gongzian/src/Haruhi-IO/src/Haruhi-timer.cpp" "/home/gongzian/src/Haruhi-IO/cmake-build/src/CMakeFiles/Haruhi.dir/Haruhi-timer.cpp.o"
   "/home/gongzian/src/Haruhi-IO/src/epoll-wrapper.cpp" "/home/gongzian/src/Haruhi-IO/cmake-build/src/CMakeFiles/Haruhi.dir/epoll-wrapper.cpp.o"
   )

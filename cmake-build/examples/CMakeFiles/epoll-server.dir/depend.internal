@@ -5,6 +5,7 @@ examples/CMakeFiles/epoll-server.dir/epoll-server.cpp.o
  ../src/include/Haruhi-epoll.h
  ../src/include/Haruhi-event.h
  ../src/include/Haruhi-loop.h
+ ../src/include/Haruhi-signal.h
  ../src/include/Haruhi-timer.h
  ../src/include/Haruhi.h
  ../src/include/common.h

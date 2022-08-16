@@ -13,7 +13,7 @@
 #include "Haruhi-event.h"
 #include "Haruhi-timer.h"
 #include "Haruhi-epoll.h"
-
+#include "Haruhi-signal.h"
 #include <queue>
 #include <list>
 #include <vector>
@@ -32,9 +32,10 @@ class Loop {
     
     void add_event(const Timer& event);
     void add_event(const Epoll& event);
-
+    void add_event(const Signal& event);
     bool remove_event(const Timer& event);
     bool remove_event(const Epoll& event);
+    bool remove_event(const Signal& event);
   private:
     class Compare {
       public:
@@ -44,7 +45,7 @@ class Loop {
         }
     };
     std::vector<std::shared_ptr<Timer>> timer_que;
-    std::list<std::shared_ptr<Event>> signal_que;
+    std::set<std::shared_ptr<Signal>> signal_que;
     std::set<std::shared_ptr<Epoll>> epoll_que;
     std::unordered_map<int, std::shared_ptr<Epoll>> epoll_map;
     int64_t current_time;

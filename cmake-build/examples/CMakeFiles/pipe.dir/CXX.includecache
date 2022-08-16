@@ -92,9 +92,11 @@ set
 common.h
 ../src/include/common.h
 
-/home/gongzian/src/Haruhi-IO/examples/timer.cpp
+/home/gongzian/src/Haruhi-IO/examples/pipe.cpp
 Haruhi.h
 /home/gongzian/src/Haruhi-IO/examples/Haruhi.h
-common.h
-/home/gongzian/src/Haruhi-IO/examples/common.h
+stdio.h
+-
+unistd.h
+-
 

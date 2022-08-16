@@ -15,6 +15,13 @@ void Loop::add_event(const Epoll& event) {
   this->epoll_que.insert(epoll);
   epoll_map[event.get_fd()] = epoll;
 }
+void Loop::add_event(const Signal& event) {
+  auto signal = std::make_shared<Signal>(event);
+  if(signal == nullptr) puts("add_event nullptr");
+  this->signal_que.insert(signal);
+  auto& epoll_ev = signal->get_epoll_ev();
+  this->add_event(epoll_ev);
+}
 
 bool Loop::remove_event(const Timer& event) {
   auto& timer_heap = this->timer_que;
@@ -33,6 +40,14 @@ bool Loop::remove_event(const Epoll& event) {
   auto epoll_ev = std::make_shared<Epoll>(event);
   set.erase(epoll_ev);
   this->epoll_map.erase(epoll_ev->get_fd());
+  return true;
+}
+
+bool Loop::remove_event(const Signal& event) {
+  auto& set = this->signal_que;
+  auto signal = std::make_shared<Signal>(event);
+  set.erase(signal);
+  this->remove_event(signal->get_epoll_ev());
   return true;
 }
 

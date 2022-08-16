@@ -1,4 +1,6 @@
-#include "Haruhi.h"
+#include "Haruhi-event.h"
+#include "Haruhi-epoll.h"
+#include <functional>
 
 namespace Haruhi {
 
@@ -15,11 +17,17 @@ class Signal: public Event {
     void init(SignalOpts opts);
     virtual bool callback() override;
     virtual std::string type() const override;
-
+    int get_read_fd() const;
+    int get_write_fd() const;
+    signal_cb get_cb() const;
+    Epoll& get_epoll_ev();
   private:
     bool once;
     signal_cb m_signal_cb;
-
+    int m_sig;
+    int m_read_fd;
+    int m_write_fd;
+    Epoll m_epoll_ev;
 };
 
 }

@@ -179,6 +179,33 @@ Haruhi-loop.cpp.s:
 	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-loop.cpp.s
 .PHONY : Haruhi-loop.cpp.s
 
+Haruhi-signal.o: Haruhi-signal.cpp.o
+
+.PHONY : Haruhi-signal.o
+
+# target to build an object file
+Haruhi-signal.cpp.o:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.o
+.PHONY : Haruhi-signal.cpp.o
+
+Haruhi-signal.i: Haruhi-signal.cpp.i
+
+.PHONY : Haruhi-signal.i
+
+# target to preprocess a source file
+Haruhi-signal.cpp.i:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.i
+.PHONY : Haruhi-signal.cpp.i
+
+Haruhi-signal.s: Haruhi-signal.cpp.s
+
+.PHONY : Haruhi-signal.s
+
+# target to generate assembly for a file
+Haruhi-signal.cpp.s:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/Haruhi-signal.cpp.s
+.PHONY : Haruhi-signal.cpp.s
+
 Haruhi-timer.o: Haruhi-timer.cpp.o
 
 .PHONY : Haruhi-timer.o
@@ -248,6 +275,9 @@ help:
 	@echo "... Haruhi-loop.o"
 	@echo "... Haruhi-loop.i"
 	@echo "... Haruhi-loop.s"
+	@echo "... Haruhi-signal.o"
+	@echo "... Haruhi-signal.i"
+	@echo "... Haruhi-signal.s"
 	@echo "... Haruhi-timer.o"
 	@echo "... Haruhi-timer.i"
 	@echo "... Haruhi-timer.s"

@@ -24,7 +24,7 @@ class EpollWrapper {
   private:
     EpollWrapper(int size) {
       m_epoll_fd = epoll_create(size);
-      printf("epoll_create(): %s\n", strerror(errno));
+      if(m_epoll_fd < 0) printf("epoll_create(): %s\n", strerror(errno));
       m_epoll_out_events = (struct epoll_event*)malloc(sizeof(struct epoll_event) * size);
     }
     static std::shared_ptr<EpollWrapper> epoll_ptr;

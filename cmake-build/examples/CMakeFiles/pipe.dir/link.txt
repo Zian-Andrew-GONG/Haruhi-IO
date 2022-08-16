@@ -1,0 +1,1 @@
+/usr/bin/g++-10     CMakeFiles/pipe.dir/pipe.cpp.o  -o ../bin/pipe  ../src/libHaruhi.a 

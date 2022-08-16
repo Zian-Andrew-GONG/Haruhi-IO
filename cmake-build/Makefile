@@ -150,6 +150,19 @@ epoll-server/fast:
 .PHONY : epoll-server/fast
 
 #=============================================================================
+# Target rules for targets named pipe
+
+# Build rule for target.
+pipe: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pipe
+.PHONY : pipe
+
+# fast build rule for target.
+pipe/fast:
+	$(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/build
+.PHONY : pipe/fast
+
+#=============================================================================
 # Target rules for targets named timer
 
 # Build rule for target.
@@ -173,6 +186,7 @@ help:
 	@echo "... Haruhi"
 	@echo "... epoll-client"
 	@echo "... epoll-server"
+	@echo "... pipe"
 	@echo "... timer"
 .PHONY : help
 

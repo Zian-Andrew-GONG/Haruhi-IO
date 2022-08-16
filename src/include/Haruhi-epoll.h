@@ -3,6 +3,7 @@
 #include <memory>
 #include <functional>
 
+#pragma once 
 namespace Haruhi {
 
 using epoll_cb = std::function<void()>;
