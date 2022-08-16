@@ -37,15 +37,32 @@ int main(int argc, char *argv[])
     if (listen(serv_sock, 5) == -1)
         puts("listen() error");
 
+    Haruhi::Loop loop;
+
     Haruhi::EpollOpts opts = {
       .fd = serv_sock,
       .events = EPOLLIN,
-      .cb = [](){ puts("epoll_callback: listening ..."); } 
-    }; opts.once = true;
+      .cb = [&](){ 
+        puts("server callback");
+        adr_sz = sizeof(clnt_adr);
+        clnt_sock = accept(serv_sock, (struct sockaddr *)&clnt_adr, &adr_sz);
+        Haruhi::EpollOpts opts_clnt = {
+            .fd = clnt_sock,
+            .events = EPOLLOUT | EPOLLONESHOT,
+            .cb = [&](){
+                puts("client callback");
+                char str[] = "hello";
+                write(clnt_sock, str, sizeof(str) - 1);
+            }
+        };
+        Haruhi::Epoll epoll_ev_clnt;
+        epoll_ev_clnt.init(opts_clnt);
+        loop.add_event(epoll_ev_clnt);
+      } 
+    }; /* opts.once = true; */
     Haruhi::Epoll epoll_ev;
     epoll_ev.init(opts);
 
-    Haruhi::Loop loop;
     loop.add_event(epoll_ev);
     loop.loop_start();
 

@@ -41,6 +41,11 @@ int main(int argc, char* argv[]) {
     }
 
     std::cout << message << std::endl;
+    while (1)
+    {
+        /* idle */
+    }
+    
     close(client_sock);
     return 0;
 }

@@ -126,19 +126,19 @@ epoll-client/fast:
 .PHONY : epoll-client/fast
 
 # Convenience name for target.
-examples/CMakeFiles/epoll-listen.dir/rule:
-	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/epoll-listen.dir/rule
-.PHONY : examples/CMakeFiles/epoll-listen.dir/rule
+examples/CMakeFiles/epoll-server.dir/rule:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/epoll-server.dir/rule
+.PHONY : examples/CMakeFiles/epoll-server.dir/rule
 
 # Convenience name for target.
-epoll-listen: examples/CMakeFiles/epoll-listen.dir/rule
+epoll-server: examples/CMakeFiles/epoll-server.dir/rule
 
-.PHONY : epoll-listen
+.PHONY : epoll-server
 
 # fast build rule for target.
-epoll-listen/fast:
-	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/build
-.PHONY : epoll-listen/fast
+epoll-server/fast:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/build
+.PHONY : epoll-server/fast
 
 # Convenience name for target.
 examples/CMakeFiles/timer.dir/rule:
@@ -182,32 +182,32 @@ epoll-client.cpp.s:
 	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-client.dir/build.make examples/CMakeFiles/epoll-client.dir/epoll-client.cpp.s
 .PHONY : epoll-client.cpp.s
 
-epoll-listen-server.o: epoll-listen-server.cpp.o
+epoll-server.o: epoll-server.cpp.o
 
-.PHONY : epoll-listen-server.o
+.PHONY : epoll-server.o
 
 # target to build an object file
-epoll-listen-server.cpp.o:
-	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/epoll-listen-server.cpp.o
-.PHONY : epoll-listen-server.cpp.o
+epoll-server.cpp.o:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/epoll-server.cpp.o
+.PHONY : epoll-server.cpp.o
 
-epoll-listen-server.i: epoll-listen-server.cpp.i
+epoll-server.i: epoll-server.cpp.i
 
-.PHONY : epoll-listen-server.i
+.PHONY : epoll-server.i
 
 # target to preprocess a source file
-epoll-listen-server.cpp.i:
-	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/epoll-listen-server.cpp.i
-.PHONY : epoll-listen-server.cpp.i
+epoll-server.cpp.i:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/epoll-server.cpp.i
+.PHONY : epoll-server.cpp.i
 
-epoll-listen-server.s: epoll-listen-server.cpp.s
+epoll-server.s: epoll-server.cpp.s
 
-.PHONY : epoll-listen-server.s
+.PHONY : epoll-server.s
 
 # target to generate assembly for a file
-epoll-listen-server.cpp.s:
-	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/epoll-listen-server.cpp.s
-.PHONY : epoll-listen-server.cpp.s
+epoll-server.cpp.s:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/epoll-server.cpp.s
+.PHONY : epoll-server.cpp.s
 
 timer.o: timer.cpp.o
 
@@ -242,17 +242,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... epoll-client"
 	@echo "... edit_cache"
-	@echo "... epoll-listen"
+	@echo "... epoll-client"
+	@echo "... epoll-server"
 	@echo "... rebuild_cache"
 	@echo "... timer"
 	@echo "... epoll-client.o"
 	@echo "... epoll-client.i"
 	@echo "... epoll-client.s"
-	@echo "... epoll-listen-server.o"
-	@echo "... epoll-listen-server.i"
-	@echo "... epoll-listen-server.s"
+	@echo "... epoll-server.o"
+	@echo "... epoll-server.i"
+	@echo "... epoll-server.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"

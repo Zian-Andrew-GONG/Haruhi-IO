@@ -1,0 +1,1 @@
+/usr/bin/g++-10     CMakeFiles/epoll-server.dir/epoll-server.cpp.o  -o ../bin/epoll-server  ../src/libHaruhi.a 

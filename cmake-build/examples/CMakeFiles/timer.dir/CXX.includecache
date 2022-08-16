@@ -71,8 +71,6 @@ unistd.h
 -
 fcntl.h
 -
-sys/epoll.h
--
 
 ../src/include/epoll-wrapper.h
 sys/epoll.h

@@ -61,7 +61,7 @@ void Loop::loop_start() {
     auto epoll_out_events = epoll_wrapper->get_epoll_out_events();
     for(int i = 0; i < ret; ++i) {
       auto active_fd = epoll_out_events[i].data.fd;
-      // std::cout << "active_fd = " << active_fd << std::endl;
+      std::cout << "active_fd = " << active_fd << std::endl;
       auto epoll = this->epoll_map[active_fd];
       if(epoll == nullptr) puts("nullptr");
       bool once = epoll->callback();

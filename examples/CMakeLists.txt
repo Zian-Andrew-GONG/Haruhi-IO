@@ -5,7 +5,7 @@ include_directories(../src/include)
 add_executable(timer timer.cpp)
 target_link_libraries(timer Haruhi)
 
-add_executable(epoll-listen epoll-listen-server.cpp)
-target_link_libraries(epoll-listen Haruhi)
+add_executable(epoll-server epoll-server.cpp)
+target_link_libraries(epoll-server Haruhi)
 
 add_executable(epoll-client epoll-client.cpp)

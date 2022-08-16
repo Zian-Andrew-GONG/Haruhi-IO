@@ -75,7 +75,7 @@ clean: examples/clean
 
 # Recursive "all" directory target.
 examples/all: examples/CMakeFiles/epoll-client.dir/all
-examples/all: examples/CMakeFiles/epoll-listen.dir/all
+examples/all: examples/CMakeFiles/epoll-server.dir/all
 examples/all: examples/CMakeFiles/timer.dir/all
 
 .PHONY : examples/all
@@ -87,7 +87,7 @@ examples/preinstall:
 
 # Recursive "clean" directory target.
 examples/clean: examples/CMakeFiles/epoll-client.dir/clean
-examples/clean: examples/CMakeFiles/epoll-listen.dir/clean
+examples/clean: examples/CMakeFiles/epoll-server.dir/clean
 examples/clean: examples/CMakeFiles/timer.dir/clean
 
 .PHONY : examples/clean
@@ -165,31 +165,31 @@ examples/CMakeFiles/epoll-client.dir/clean:
 .PHONY : examples/CMakeFiles/epoll-client.dir/clean
 
 #=============================================================================
-# Target rules for target examples/CMakeFiles/epoll-listen.dir
+# Target rules for target examples/CMakeFiles/epoll-server.dir
 
 # All Build rule for target.
-examples/CMakeFiles/epoll-listen.dir/all: src/CMakeFiles/Haruhi.dir/all
-	$(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/depend
-	$(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=8,9 "Built target epoll-listen"
-.PHONY : examples/CMakeFiles/epoll-listen.dir/all
+examples/CMakeFiles/epoll-server.dir/all: src/CMakeFiles/Haruhi.dir/all
+	$(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/depend
+	$(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=8,9 "Built target epoll-server"
+.PHONY : examples/CMakeFiles/epoll-server.dir/all
 
 # Build rule for subdir invocation for target.
-examples/CMakeFiles/epoll-listen.dir/rule: cmake_check_build_system
+examples/CMakeFiles/epoll-server.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 7
-	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/epoll-listen.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/epoll-server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 0
-.PHONY : examples/CMakeFiles/epoll-listen.dir/rule
+.PHONY : examples/CMakeFiles/epoll-server.dir/rule
 
 # Convenience name for target.
-epoll-listen: examples/CMakeFiles/epoll-listen.dir/rule
+epoll-server: examples/CMakeFiles/epoll-server.dir/rule
 
-.PHONY : epoll-listen
+.PHONY : epoll-server
 
 # clean rule for target.
-examples/CMakeFiles/epoll-listen.dir/clean:
-	$(MAKE) -f examples/CMakeFiles/epoll-listen.dir/build.make examples/CMakeFiles/epoll-listen.dir/clean
-.PHONY : examples/CMakeFiles/epoll-listen.dir/clean
+examples/CMakeFiles/epoll-server.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/epoll-server.dir/build.make examples/CMakeFiles/epoll-server.dir/clean
+.PHONY : examples/CMakeFiles/epoll-server.dir/clean
 
 #=============================================================================
 # Target rules for target examples/CMakeFiles/timer.dir
