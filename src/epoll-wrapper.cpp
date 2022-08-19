@@ -34,7 +34,10 @@ struct epoll_event* EpollWrapper::get_epoll_out_events() { return m_epoll_out_ev
 int& EpollWrapper::get_ref_epoll_fd() { return this->m_epoll_fd; }
 
 int EpollWrapper::wait(int timeout) {
-  int ret = epoll_wait(m_epoll_fd, m_epoll_out_events, 2048, timeout);
-  if(ret < 0) printf("epoll_wait(): %s\n", strerror(errno));
+  int ret;
+  do {
+    ret = epoll_wait(m_epoll_fd, m_epoll_out_events, 2048, timeout);
+    if(ret < 0) printf("epoll_wait(): %s\n", strerror(errno));
+  } while (ret < 0 && errno == EINTR);
   return ret;
 }

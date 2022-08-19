@@ -96,19 +96,7 @@ set
 common.h
 ../src/include/common.h
 
-/home/gongzian/src/Haruhi-IO/examples/epoll-server.cpp
-stdio.h
--
-stdlib.h
--
-string.h
--
-unistd.h
--
-arpa/inet.h
--
-sys/socket.h
--
+/home/gongzian/src/Haruhi-IO/examples/signal.cpp
 Haruhi.h
 /home/gongzian/src/Haruhi-IO/examples/Haruhi.h
 

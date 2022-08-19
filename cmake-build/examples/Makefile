@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+examples/CMakeFiles/signal.dir/rule:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/signal.dir/rule
+.PHONY : examples/CMakeFiles/signal.dir/rule
+
+# Convenience name for target.
+signal: examples/CMakeFiles/signal.dir/rule
+
+.PHONY : signal
+
+# fast build rule for target.
+signal/fast:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/signal.dir/build.make examples/CMakeFiles/signal.dir/build
+.PHONY : signal/fast
+
+# Convenience name for target.
 examples/CMakeFiles/epoll-client.dir/rule:
 	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/epoll-client.dir/rule
 .PHONY : examples/CMakeFiles/epoll-client.dir/rule
@@ -251,6 +266,33 @@ pipe.cpp.s:
 	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/pipe.dir/build.make examples/CMakeFiles/pipe.dir/pipe.cpp.s
 .PHONY : pipe.cpp.s
 
+signal.o: signal.cpp.o
+
+.PHONY : signal.o
+
+# target to build an object file
+signal.cpp.o:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/signal.dir/build.make examples/CMakeFiles/signal.dir/signal.cpp.o
+.PHONY : signal.cpp.o
+
+signal.i: signal.cpp.i
+
+.PHONY : signal.i
+
+# target to preprocess a source file
+signal.cpp.i:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/signal.dir/build.make examples/CMakeFiles/signal.dir/signal.cpp.i
+.PHONY : signal.cpp.i
+
+signal.s: signal.cpp.s
+
+.PHONY : signal.s
+
+# target to generate assembly for a file
+signal.cpp.s:
+	cd /home/gongzian/src/Haruhi-IO/cmake-build && $(MAKE) -f examples/CMakeFiles/signal.dir/build.make examples/CMakeFiles/signal.dir/signal.cpp.s
+.PHONY : signal.cpp.s
+
 timer.o: timer.cpp.o
 
 .PHONY : timer.o
@@ -285,6 +327,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... signal"
 	@echo "... epoll-client"
 	@echo "... epoll-server"
 	@echo "... pipe"
@@ -299,6 +342,9 @@ help:
 	@echo "... pipe.o"
 	@echo "... pipe.i"
 	@echo "... pipe.s"
+	@echo "... signal.o"
+	@echo "... signal.i"
+	@echo "... signal.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"

@@ -124,6 +124,19 @@ Haruhi/fast:
 .PHONY : Haruhi/fast
 
 #=============================================================================
+# Target rules for targets named signal
+
+# Build rule for target.
+signal: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 signal
+.PHONY : signal
+
+# fast build rule for target.
+signal/fast:
+	$(MAKE) -f examples/CMakeFiles/signal.dir/build.make examples/CMakeFiles/signal.dir/build
+.PHONY : signal/fast
+
+#=============================================================================
 # Target rules for targets named epoll-client
 
 # Build rule for target.
@@ -184,6 +197,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Haruhi"
+	@echo "... signal"
 	@echo "... epoll-client"
 	@echo "... epoll-server"
 	@echo "... pipe"

@@ -4,6 +4,7 @@
 /home/gongzian/src/Haruhi-IO/cmake-build/src/CMakeFiles/edit_cache.dir
 /home/gongzian/src/Haruhi-IO/cmake-build/src/CMakeFiles/Haruhi.dir
 /home/gongzian/src/Haruhi-IO/cmake-build/examples/CMakeFiles/edit_cache.dir
+/home/gongzian/src/Haruhi-IO/cmake-build/examples/CMakeFiles/signal.dir
 /home/gongzian/src/Haruhi-IO/cmake-build/examples/CMakeFiles/epoll-client.dir
 /home/gongzian/src/Haruhi-IO/cmake-build/examples/CMakeFiles/epoll-server.dir
 /home/gongzian/src/Haruhi-IO/cmake-build/examples/CMakeFiles/pipe.dir

@@ -49,6 +49,8 @@ Haruhi-epoll.h
 ../src/include/Haruhi-epoll.h
 functional
 -
+signal.h
+-
 
 ../src/include/Haruhi-timer.h
 Haruhi-event.h
@@ -80,6 +82,8 @@ stdio.h
 unistd.h
 -
 fcntl.h
+-
+sys/socket.h
 -
 
 ../src/include/epoll-wrapper.h

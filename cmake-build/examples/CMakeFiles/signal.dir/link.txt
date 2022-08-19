@@ -1,0 +1,1 @@
+/usr/bin/g++-10     CMakeFiles/signal.dir/signal.cpp.o  -o ../bin/signal  ../src/libHaruhi.a 

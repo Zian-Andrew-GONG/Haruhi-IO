@@ -1,6 +1,7 @@
 #include "Haruhi-event.h"
 #include "Haruhi-epoll.h"
 #include <functional>
+#include <signal.h>
 
 namespace Haruhi {
 

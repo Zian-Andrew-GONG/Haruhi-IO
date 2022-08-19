@@ -56,6 +56,10 @@ void Loop::loop_start() {
   while(1) {
     if(this->timer_que.empty() && this->signal_que.empty() 
        && this->epoll_que.empty()) break;
+       std::cout << "timer_que.size(): " << timer_que.size() 
+                << "\nsignal_que.size(): " << signal_que.size()
+                << "\nepoll_que.size(): " << epoll_que.size()
+                << "\nepoll_map.size(): " << epoll_map.size() << std::endl;
     /* stop the loop immediately */
     if(this->stop_flag) break;
     /* update current time */
@@ -71,7 +75,7 @@ void Loop::loop_start() {
     /* epoll's timeout = timewait */
     auto epoll_wrapper = EpollWrapper::getEpollWrapper();
     // std::cout << "timewait = " << timewait << std::endl;
-    int ret = epoll_wrapper->wait(timewait);
+    int ret = epoll_wrapper->wait(-1);
     if(ret < 0) break;
     auto epoll_out_events = epoll_wrapper->get_epoll_out_events();
     for(int i = 0; i < ret; ++i) {

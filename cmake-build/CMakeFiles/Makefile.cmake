@@ -50,6 +50,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/Haruhi.dir/DependInfo.cmake"
+  "examples/CMakeFiles/signal.dir/DependInfo.cmake"
   "examples/CMakeFiles/epoll-client.dir/DependInfo.cmake"
   "examples/CMakeFiles/epoll-server.dir/DependInfo.cmake"
   "examples/CMakeFiles/pipe.dir/DependInfo.cmake"

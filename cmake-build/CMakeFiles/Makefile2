@@ -74,6 +74,7 @@ clean: examples/clean
 # Directory level rules for directory examples
 
 # Recursive "all" directory target.
+examples/all: examples/CMakeFiles/signal.dir/all
 examples/all: examples/CMakeFiles/epoll-client.dir/all
 examples/all: examples/CMakeFiles/epoll-server.dir/all
 examples/all: examples/CMakeFiles/pipe.dir/all
@@ -87,6 +88,7 @@ examples/preinstall:
 .PHONY : examples/preinstall
 
 # Recursive "clean" directory target.
+examples/clean: examples/CMakeFiles/signal.dir/clean
 examples/clean: examples/CMakeFiles/epoll-client.dir/clean
 examples/clean: examples/CMakeFiles/epoll-server.dir/clean
 examples/clean: examples/CMakeFiles/pipe.dir/clean
@@ -138,6 +140,33 @@ Haruhi: src/CMakeFiles/Haruhi.dir/rule
 src/CMakeFiles/Haruhi.dir/clean:
 	$(MAKE) -f src/CMakeFiles/Haruhi.dir/build.make src/CMakeFiles/Haruhi.dir/clean
 .PHONY : src/CMakeFiles/Haruhi.dir/clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/signal.dir
+
+# All Build rule for target.
+examples/CMakeFiles/signal.dir/all: src/CMakeFiles/Haruhi.dir/all
+	$(MAKE) -f examples/CMakeFiles/signal.dir/build.make examples/CMakeFiles/signal.dir/depend
+	$(MAKE) -f examples/CMakeFiles/signal.dir/build.make examples/CMakeFiles/signal.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=13,14 "Built target signal"
+.PHONY : examples/CMakeFiles/signal.dir/all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/signal.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/signal.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles 0
+.PHONY : examples/CMakeFiles/signal.dir/rule
+
+# Convenience name for target.
+signal: examples/CMakeFiles/signal.dir/rule
+
+.PHONY : signal
+
+# clean rule for target.
+examples/CMakeFiles/signal.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/signal.dir/build.make examples/CMakeFiles/signal.dir/clean
+.PHONY : examples/CMakeFiles/signal.dir/clean
 
 #=============================================================================
 # Target rules for target examples/CMakeFiles/epoll-client.dir
@@ -227,7 +256,7 @@ examples/CMakeFiles/pipe.dir/clean:
 examples/CMakeFiles/timer.dir/all: src/CMakeFiles/Haruhi.dir/all
 	$(MAKE) -f examples/CMakeFiles/timer.dir/build.make examples/CMakeFiles/timer.dir/depend
 	$(MAKE) -f examples/CMakeFiles/timer.dir/build.make examples/CMakeFiles/timer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=13,14 "Built target timer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gongzian/src/Haruhi-IO/cmake-build/CMakeFiles --progress-num=15,16 "Built target timer"
 .PHONY : examples/CMakeFiles/timer.dir/all
 
 # Build rule for subdir invocation for target.
